@@ -85,12 +85,17 @@ CREATE TABLE people (
 
 INSERT INTO people (id, first_name, last_name, email, linkedin_url, headshot_url, discord_handle, brief_bio, date_joined)
 VALUES 
-(1, 'John', 'Person 1', 'john.person1@email.com', 'linkedin.com/john.person1', 'headshot1.jpg', 'john.person1#1234', 'Brief bio for John Person 1.', '2023-01-01'),
-(2, 'Jane', 'Person 2', 'jane.person2@email.com', 'linkedin.com/jane.person2', 'headshot2.jpg', 'jane.person2#1234', 'Brief bio for Jane Person 2.', '2023-02-01'),
-(3, 'Bob', 'Person 3', 'bob.person3@email.com', 'linkedin.com/bob.person3', 'headshot3.jpg', 'bob.person3#1234', 'Brief bio for Bob Person 3.', '2023-03-01'),
-(4, 'Alice', 'Person 4', 'alice.person4@email.com', 'linkedin.com/alice.person4', 'headshot4.jpg', 'alice.person4#1234', 'Brief bio for Alice Person 4.', '2023-04-01'),
-(5, 'Charlie', 'Person 5', 'charlie.person5@email.com', 'linkedin.com/charlie.person5', 'headshot5.jpg', 'charlie.person5#1234', 'Brief bio for Charlie Person 5.', '2023-05-01'),
-(6, 'Eva', 'Person 6', 'eva.person6@email.com', 'linkedin.com/eva.person6', 'headshot6.jpg', 'eva.person6#1234', 'Brief bio for Eva Person 6.', '2023-06-01');
+(1, 'John', 'Person 1', 'john.person1@email.com', 'linkedin.com/john.person1', 'headshot1.jpg', 'john.person1#1234', 'Tech enthusiast and nature lover.', '2023-01-01'),
+(2, 'Jane', 'Person 2', 'jane.person2@email.com', 'linkedin.com/jane.person2', 'headshot2.jpg', 'jane.person2#1234', 'Passionate about art and travel.', '2023-02-01'),
+(3, 'Bob', 'Person 3', 'bob.person3@email.com', 'linkedin.com/bob.person3', 'headshot3.jpg', 'bob.person3#1234', 'AI and robotics enthusiast.', '2023-03-01'),
+(4, 'Alice', 'Person 4', 'alice.person4@email.com', 'linkedin.com/alice.person4', 'headshot4.jpg', 'alice.person4#1234', 'Adventurous foodie and book lover.', '2023-04-01'),
+(5, 'Charlie', 'Person 5', 'charlie.person5@email.com', 'linkedin.com/charlie.person5', 'headshot5.jpg', 'charlie.person5#1234', 'Fitness freak and photography enthusiast.', '2023-05-01'),
+(6, 'Eva', 'Person 6', 'eva.person6@email.com', 'linkedin.com/eva.person6', 'headshot6.jpg', 'eva.person6#1234', 'Music lover and coding ninja.', '2023-06-01'),
+(7, 'David', 'Person 7', 'david.person7@email.com', 'linkedin.com/david.person7', 'headshot7.jpg', 'david.person7#1234', 'Adventure seeker and coffee addict.', '2023-07-01'),
+(8, 'Fiona', 'Person 8', 'fiona.person8@email.com', 'linkedin.com/fiona.person8', 'headshot8.jpg', 'fiona.person8#1234', 'Nature lover and aspiring chef.', '2023-08-01'),
+(9, 'George', 'Person 9', 'george.person9@email.com', 'linkedin.com/george.person9', 'headshot9.jpg', 'george.person9#1234', 'Gamer and technology geek.', '2023-09-01'),
+(10, 'Holly', 'Person 10', 'holly.person10@email.com', 'linkedin.com/holly.person10', 'headshot10.jpg', 'holly.person10#1234', 'Artistic soul and fitness enthusiast.', '2023-10-01');
+
 
 
 # Section 6
