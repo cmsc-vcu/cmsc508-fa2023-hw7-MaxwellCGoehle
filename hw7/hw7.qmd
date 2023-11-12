@@ -413,5 +413,5 @@ df
 
 ## Reflection
 
-I learned a lot about databases in this assignment. It is all good and well to talk about these things in class but actually having to do it made me understand what was happening a lot more. I thought the assignment was not too difficult, and the help in class in order to help get us on the right track made it manageable in my opinion. I think this assignment helped to bridge the gap between theory and practice and I feel more confident in my skills now going into the group project again after this assignment. 
+I learned a lot about databases in this assignment. It is all good and well to talk about these things in class but actually having to do it made me understand what was happening a lot more. I thought the assignment was not too difficult, and the help in class in order to help get us on the right track made it manageable in my opinion. I think this assignment helped to bridge the gap between theory and practice and I feel more confident in my skills now going into the group project again after this assignment.
 
