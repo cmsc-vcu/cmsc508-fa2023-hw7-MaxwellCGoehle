@@ -94,7 +94,7 @@ This database includes people, their skills, their roles etc.
 
 ## Crows-foot diagram
 
-(add a description of the diagram and what the reader is seeing.)
+There are 5 tables: People, skills, roles, peopleroles, and peopleskills. Inside each table is the variables their name and datatype and how the tables are connected to one another. 
 
 ```{mermaid}
 %%| echo: false
