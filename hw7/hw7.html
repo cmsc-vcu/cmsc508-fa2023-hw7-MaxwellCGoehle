@@ -3375,13 +3375,21 @@ z-index: 1000;
 
 <p>This document includes the description of the resume database, including showing some of the tables and answering some query</p>
 <p>GITHUB URL: <a href="https://github.com/cmsc-vcu/cmsc508-fa2023-hw7-MaxwellCGoehle.git" class="uri">https://github.com/cmsc-vcu/cmsc508-fa2023-hw7-MaxwellCGoehle.git</a></p>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Database/SQL Error:
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+</code></pre>
+</div>
+</div>
 <section id="overview-and-description" class="level2">
 <h2 class="anchored" data-anchor-id="overview-and-description">Overview and description</h2>
 <p>This database includes people, their skills, their roles etc.</p>
 </section>
 <section id="crows-foot-diagram" class="level2">
 <h2 class="anchored" data-anchor-id="crows-foot-diagram">Crows-foot diagram</h2>
-<p>(add a description of the diagram and what the reader is seeing.)</p>
+<p>There are 5 tables: People, skills, roles, peopleroles, and peopleskills. Inside each table is the variables their name and datatype and how the tables are connected to one another.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -3434,7 +3442,15 @@ z-index: 1000;
 <p>The <em>people</em> table contains elements that describe peoples names, linkedin adresses, headshot pictures, discord handles, a brief bio, and the date they joined.</p>
 <p>Below is a list of data in the <em>people</em> table.</p>
 <div class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -3442,90 +3458,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
-<th data-quarto-table-cell-role="th">email</th>
-<th data-quarto-table-cell-role="th">linkedin_url</th>
-<th data-quarto-table-cell-role="th">headshot_url</th>
-<th data-quarto-table-cell-role="th">discord_handle</th>
-<th data-quarto-table-cell-role="th">brief_bio</th>
-<th data-quarto-table-cell-role="th">date_joined</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>John</td>
-<td>Person 1</td>
-<td>john.person1@email.com</td>
-<td>linkedin.com/john.person1</td>
-<td>headshot1.jpg</td>
-<td>john.person1#1234</td>
-<td>Brief bio for John Person 1.</td>
-<td>2023-01-01</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>Jane</td>
-<td>Person 2</td>
-<td>jane.person2@email.com</td>
-<td>linkedin.com/jane.person2</td>
-<td>headshot2.jpg</td>
-<td>jane.person2#1234</td>
-<td>Brief bio for Jane Person 2.</td>
-<td>2023-02-01</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>Bob</td>
-<td>Person 3</td>
-<td>bob.person3@email.com</td>
-<td>linkedin.com/bob.person3</td>
-<td>headshot3.jpg</td>
-<td>bob.person3#1234</td>
-<td>Brief bio for Bob Person 3.</td>
-<td>2023-03-01</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>Alice</td>
-<td>Person 4</td>
-<td>alice.person4@email.com</td>
-<td>linkedin.com/alice.person4</td>
-<td>headshot4.jpg</td>
-<td>alice.person4#1234</td>
-<td>Brief bio for Alice Person 4.</td>
-<td>2023-04-01</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>Charlie</td>
-<td>Person 5</td>
-<td>charlie.person5@email.com</td>
-<td>linkedin.com/charlie.person5</td>
-<td>headshot5.jpg</td>
-<td>charlie.person5#1234</td>
-<td>Brief bio for Charlie Person 5.</td>
-<td>2023-05-01</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>6</td>
-<td>Eva</td>
-<td>Person 6</td>
-<td>eva.person6@email.com</td>
-<td>linkedin.com/eva.person6</td>
-<td>headshot6.jpg</td>
-<td>eva.person6#1234</td>
-<td>Brief bio for Eva Person 6.</td>
-<td>2023-06-01</td>
-</tr>
 </tbody>
 </table>
 
@@ -3538,7 +3473,15 @@ z-index: 1000;
 <p>The <em>skills</em> table contains elements that describe the name of the skills, gives a brief description and the tag.</p>
 <p>Below is a list of data in the <em>skills</em> table.</p>
 <div class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -3546,69 +3489,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">description</th>
-<th data-quarto-table-cell-role="th">tag</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>rock climbing</td>
-<td>(default description)</td>
-<td>Skill 1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>sky diving</td>
-<td>(default description)</td>
-<td>Skill 2</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>basketball</td>
-<td>(default description)</td>
-<td>Skill 3</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>break dancing</td>
-<td>(default description)</td>
-<td>Skill 4</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>fast book reader</td>
-<td>(default description)</td>
-<td>Skill 5</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>6</td>
-<td>math wizard</td>
-<td>(default description)</td>
-<td>Skill 6</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>7</td>
-<td>fast clapper</td>
-<td>(default description)</td>
-<td>Skill 7</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>8</td>
-<td>long distance runner</td>
-<td>(default description)</td>
-<td>Skill 8</td>
-</tr>
 </tbody>
 </table>
 
@@ -3621,7 +3504,15 @@ z-index: 1000;
 <p>The <em>roles</em> table contains elements that describe the roles: their names and their priority.</p>
 <p>Below is a list of data in the <em>roles</em> table.</p>
 <div class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -3629,48 +3520,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">sort_priority</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>Designer</td>
-<td>10</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>Developer</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>Recruit</td>
-<td>30</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>Team Lead</td>
-<td>40</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>Boss</td>
-<td>50</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>6</td>
-<td>Mentor</td>
-<td>60</td>
-</tr>
 </tbody>
 </table>
 
@@ -3687,13 +3539,21 @@ z-index: 1000;
 <h1>List skill names, tags, and descriptions ordered by name</h1>
 <p>(here a sample query)</p>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sql <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">select * from people</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">&quot;&quot;&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sql <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ss">select * from people</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">&quot;&quot;&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>(and here is a sample result from the query)</p>
 <div class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -3701,60 +3561,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">tag</th>
-<th data-quarto-table-cell-role="th">description</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>basketball</td>
-<td>Skill 3</td>
-<td>(default description)</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>break dancing</td>
-<td>Skill 4</td>
-<td>(default description)</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>fast book reader</td>
-<td>Skill 5</td>
-<td>(default description)</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>fast clapper</td>
-<td>Skill 7</td>
-<td>(default description)</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>long distance runner</td>
-<td>Skill 8</td>
-<td>(default description)</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>math wizard</td>
-<td>Skill 6</td>
-<td>(default description)</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>rock climbing</td>
-<td>Skill 1</td>
-<td>(default description)</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>sky diving</td>
-<td>Skill 2</td>
-<td>(default description)</td>
-</tr>
 </tbody>
 </table>
 
@@ -3764,7 +3573,15 @@ z-index: 1000;
 <section id="list-people-names-and-email-addresses-ordered-by-last_name" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-email-addresses-ordered-by-last_name">List people names and email addresses ordered by last_name</h3>
 <div class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display" data-execution_count="27">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
 
@@ -3772,48 +3589,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
-<th data-quarto-table-cell-role="th">email</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>John</td>
-<td>Person 1</td>
-<td>john.person1@email.com</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Jane</td>
-<td>Person 2</td>
-<td>jane.person2@email.com</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Bob</td>
-<td>Person 3</td>
-<td>bob.person3@email.com</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Alice</td>
-<td>Person 4</td>
-<td>alice.person4@email.com</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>Charlie</td>
-<td>Person 5</td>
-<td>charlie.person5@email.com</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>Eva</td>
-<td>Person 6</td>
-<td>eva.person6@email.com</td>
-</tr>
 </tbody>
 </table>
 
@@ -3824,7 +3602,15 @@ z-index: 1000;
 <section id="list-skill-names-of-person-1" class="level3">
 <h3 class="anchored" data-anchor-id="list-skill-names-of-person-1">List skill names of Person 1</h3>
 <div class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
 
@@ -3832,22 +3618,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">name</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>rock climbing</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>basketball</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>math wizard</td>
-</tr>
 </tbody>
 </table>
 
@@ -3858,7 +3631,15 @@ z-index: 1000;
 <section id="list-people-names-with-skill-6" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-with-skill-6">List people names with Skill 6</h3>
 <div class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="12">
 <div>
 
 
@@ -3866,21 +3647,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>John</td>
-<td>Person 1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Charlie</td>
-<td>Person 5</td>
-</tr>
 </tbody>
 </table>
 
@@ -3891,7 +3660,15 @@ z-index: 1000;
 <section id="list-people-with-a-developer-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-with-a-developer-role">List people with a DEVELOPER role</h3>
 <div class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 
 
@@ -3899,26 +3676,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>John</td>
-<td>Person 1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Bob</td>
-<td>Person 3</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Eva</td>
-<td>Person 6</td>
-</tr>
 </tbody>
 </table>
 
@@ -3929,7 +3689,15 @@ z-index: 1000;
 <section id="list-names-and-email-addresses-of-people-without-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-email-addresses-of-people-without-skills">List names and email addresses of people without skills</h3>
 <div class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="14">
 <div>
 
 
@@ -3937,18 +3705,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
-<th data-quarto-table-cell-role="th">email</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Alice</td>
-<td>Person 4</td>
-<td>alice.person4@email.com</td>
-</tr>
 </tbody>
 </table>
 
@@ -3959,7 +3718,15 @@ z-index: 1000;
 <section id="list-names-and-tags-of-unused-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-tags-of-unused-skills">List names and tags of unused skills</h3>
 <div class="cell" data-execution_count="15">
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
 
@@ -3967,21 +3734,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">tag</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>fast clapper</td>
-<td>Skill 7</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>long distance runner</td>
-<td>Skill 8</td>
-</tr>
 </tbody>
 </table>
 
@@ -3992,7 +3747,15 @@ z-index: 1000;
 <section id="list-people-names-and-skill-names-with-the-boss-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-skill-names-with-the-boss-role">List people names and skill names with the BOSS role</h3>
 <div class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -4000,30 +3763,9 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">first_name</th>
-<th data-quarto-table-cell-role="th">last_name</th>
-<th data-quarto-table-cell-role="th">name</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Jane</td>
-<td>Person 2</td>
-<td>fast book reader</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Jane</td>
-<td>Person 2</td>
-<td>break dancing</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Jane</td>
-<td>Person 2</td>
-<td>basketball</td>
-</tr>
 </tbody>
 </table>
 
@@ -4034,7 +3776,15 @@ z-index: 1000;
 <section id="list-ids-and-names-of-unused-roles" class="level3">
 <h3 class="anchored" data-anchor-id="list-ids-and-names-of-unused-roles">List ids and names of unused roles</h3>
 <div class="cell" data-execution_count="17">
-<div class="cell-output cell-output-display" data-execution_count="34">
+<div class="cell-output cell-output-stdout">
+<pre><code>An error occurred:
+
+(pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;FA_goehlemc&#39;@&#39;pool-71-251-229-183.rcmdva.fios.verizon.net&#39; (using password: YES)&quot;)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+Ignoring and moving on.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
@@ -4042,8 +3792,6 @@ z-index: 1000;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">name</th>
 </tr>
 </thead>
 <tbody>
